@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+
+    <style>
+        button {
+            border: none;
+            padding: 15px 32px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        button:hover {
+            background-color: #134715;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando números</h1>
+    <button id="somar">Iniciar Soma</button>
+    <p id="resultado">O resultado vai aparecer aqui...</p>
+
+    <script>
+        document.getElementById('somar').addEventListener('click', function(){
+
+            const mostrarResultado = document.getElementById('resultado')
+            const primeiroNumero = Number(prompt('Digite um número: '))
+            const segundoNumero = Number(prompt('Digite o segundo número'))
+
+            resultado = primeiroNumero + segundoNumero
+
+            mostrarResultado.innerHTML = `A soma entre ${primeiroNumero} e ${segundoNumero} é igual a <b>${resultado}!<b>`
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        button {
+            border: none;
+            padding: 15px 32px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        button:hover {
+            background-color: #134715;
+            transition: 1s;
+        }
+
+        #resultado {
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <button id="calcular">Calcular</button>
+    <p id="resultado">O resultado vai aparecer aqui...</p>
+
+    <script>
+        document.getElementById('calcular').addEventListener('click', function () {
+            const mostrarResultado = document.getElementById('resultado')
+            const numero = Number(prompt('Digite um número: '))
+
+            mostrarResultado.innerHTML = `O valor a ser analisado aqui será o <b>${numero}</b><hr>
+            O seu valor absoluto é ${Math.abs(numero)}<br>
+            A sua parte inteira é ${Math.trunc(numero)}<br>
+            O valor inteiro mais próximo é ${Math.round(numero)}<br>
+            A sua raiz quadrada é ${Math.sqrt(numero)}<br>
+            A sua raiz cubica é ${Math.cbrt(numero)}<br>
+            O valor de ${numero}² é ${Math.pow(numero, 2)}<br>
+            O valor de ${numero}³ é ${Math.pow(numero, 3)}<br>
+            `
+        })
+    </script>
+</body>
+
+</html>
